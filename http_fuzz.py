@@ -38,10 +38,10 @@ def main():
   s_initialize(name="Request")
   with s_block("Request-Line"):
     s_group("Method", ['GET', 'HEAD', 'POST', 'PUT', 'DELETE', 'CONNECT', 'OPTIONS', 'TRACE'])
-    s_delim(" ", name='space-1', fuzzable = False)
+    s_delim(" ", name='space-1')
     s_string("/index.html", name='Request-URI')
-    s_delim(" ", name='space-2', fuzzable = False)
-    s_string('HTTP/1.1', name='HTTP-Version', fuzzable = False)
+    s_delim(" ", name='space-2')
+    s_string('HTTP/1.1', name='HTTP-Version')
     s_static("\r\n", name="Request-Line-CRLF")
   s_static("\r\n", "Request-CRLF")
 
