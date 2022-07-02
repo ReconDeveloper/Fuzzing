@@ -5,8 +5,9 @@ from bs4 import BeautifulSoup
 import requests
 import re
 
-# Grab banner and use to determine if vulnserver still up
+# Grab banner and use to determine if web still up
 def getBanner(target, log, session, *args, **kwargs):
+  # change banner to unique string on site	
   banner = "Welcome to Home"
   url = 'http://127.0.0.1/index.html'
   try:
